@@ -1,0 +1,85 @@
+<!DOCTYPE html> <!--Indica a versão 5 do html (atualizada). Esta é uma tag simples, não se fecha--> 
+<html lang="pt-BR"> <!--tag de abertura--> <!-- "<" e ">" são colchetes angulares (menor que e maior que). Tag composta, se fecha--> 
+<!--estrutura de um atributo: "nomeAtributo" = ""infoAtributo"". Lang é um atributo de linguagem, atribuimos a linguagem Português brasileiro, então no caso de uma tradução da página, o tradutor vai saber que a linguagem é essa-->
+<!--É possível inserir mais de um atributo, só separar com espaços: atributo1 = "infoAtributo1" atributo2 = "infoAtributo2"...-->
+    <head> <!--Cabeça da página--> 
+        <!--As meta tags são elementos usados para fornecer alguma informação em um documento HTML. A tag é a <meta> e, dentro dela, devem conter os comandos de cada informação que você quer que contenha na página. Vale sinalizar que as meta tags não são úteis apenas para os mecanismos de busca.-->
+        <meta name="author" content="Felipe dos Anjos Laudano"> <!--tag simples, meta tag, informação que não aparece dentro da página, neste caso informamos o autor da página. Isso fica dentro das informações da página (configurações)-->
+        <meta name="description" content="Este site foi desenvolvido na primeira aula de HTML"> <!--Aqui foi adicionada uma meta tag para descrever o site-->
+        <meta name="keywords" content="html, internet, meta tags"> <!--meta tag para palavras chaves do site-->
+        <meta charset="UTF-8"> <!--Meta tag utilizada para comunicar aos navegadores qual é o formato de codificação de caracteres utilizado naquele documento. Serve para que os navegadores saibam como devem renderizar os textos incluídos em uma página específica. UTF-8 representa um maior número de idiomas e caracteres, Unicode — ou Conjunto de Caracteres Codificados Universal, esse padrão uniformiza as informações ao redor do mundo fazendo com que os navegadores renderem todos os conteúdos a partir das regras estabelecidas pelo UTF-8. -->  
+        <!--informação da página, não aparece para o usuário-->    
+        <title>                       
+            Site de exemplo 
+        </title>
+    </head>
+    <body> <!-- tudo que é visto na página, corpo da página-->
+        <h1> <!--h1: título principal da página, utilizado apenas uma vez, dentro do escopo de html-->
+            Título de exemplo
+        </h1>           <!--(tabs e pula linha para hierarquia)-->
+        <h2> <!--Subtítulo, quanto maior o h, menor o tamanho da fonte. Até o h6-->
+            Título de exemplo 2
+        </h2>
+        <h3>
+            Título de exemplo 3
+        </h3>
+        <h4>
+            Título de exemplo 4
+        </h4>
+        <h5>
+            Título de exemplo 5
+        </h5>
+        <h6>
+            Título de exemplo 6
+        </h6>
+        <p> <!--p: parágrafo, filho de html, dentro do escopo de html, disposição em bloco (ao iniciar, quebra a linha e ao finalizar também)-->
+            Parágrafo de exemplo
+            &rarr; &lt;html&gt; <!--Utilização de símbolos na página-->  
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci fuga voluptatem consectetur aliquid sit enim numquam molestiae ipsum consequuntur magni, accusantium nulla necessitatibus amet laboriosam soluta magnam, aspernatur minus dolorum.
+            <!--Neste caso, não haverá quebra de linha, há quebra de linha na criação de outro parágrafo, ou utilização da tag <br>. As páginas web tem o padrão de inserir os elementos da esquerda para direita de cima para baixo-->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam hic veritatis, incidunt quasi quae dolor temporibus quis facilis aspernatur maiores exercitationem porro et itaque deleniti id inventore eligendi nulla similique.
+        </p>
+        <p> <!--Exemplo mostrando que quebra de linha ao criar outro parágrafo-->
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            <hr> <!--horizontal row, linha horizontal que também faz uma quebra de linha -->
+            Rerum, non. Dolore, non voluptas! Tempore quaerat maiores expedita nihil laboriosam ipsa et. 
+            <br> <!--break row, tag que faz uma quebra de linha-->
+            <br> <!--Outra quebra de linha-->
+            Possimus qui quis delectus libero consequatur adipisci sed quae?
+        </p>
+        <p>
+            <!-- <b> -> Negrito (Aparência), disposição em linha (não quebra a linha ao iniciar ou finalizar) -->
+            <!-- <strong> -> Negrito (Aparência + semântica mais relevante para o navegador + facilita a leitura + facilita acessibilidade), disposição em linha. -->
+            <!-- <i> -> Itálico (Aparência), disposição em linha -->
+            <!-- <em> -> Itálico (Aparência + relevância), disposição em linha -->
+            <!-- <small> -> Texto menor, menos destaque, menos relevância, disposição em linha -->
+            <!-- <u> -> Sublinhado, disposição em linha -->
+
+            <b>Lorem</b> ipsum dolor sit amet consectetur adipisicing elit. <u>Cumque impedit veniam eius beatae!</u> Eos, odio aperiam ab enim nisi et unde expedita minima ullam iste consectetur eveniet sint illo sed? <i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</i> 
+            <u><i>Voluptatem iusto</i></u> <!--Itálico + sublinhado, sempre levar em consideração o fechamento das tags, sempre ir fechando com os das pontas. Se fizer, u>i{} dá certo também--> 
+            omnis corporis quam cupiditate eaque saepe mollitia unde, hic quidem nam incidunt maxime dolorum aperiam commodi. Atque veritatis aspernatur tempora. <strong>Lorem ipsum dolor sit amet consectetur</strong>, adipisicing elit. <em>Quae fugiat, possimus excepturi voluptas, cupiditate quasi officiis minus explicabo eius praesentium voluptatibus eveniet similique.</em> Sint esse odit, <small>quibusdam aspernatur minima commodi!</small>
+        </p>
+        <p>
+            <pre> <!-- Deixa o texto na página, igual esta no código e altera a fonte para monospace (mesmo espaço entre os caracteres), função: pré formatar-->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+                Earum laborum deserunt ipsam vitae pariatur, beatae odit exercitationem cupiditate, repellend 
+                vel facere ipsum? Iusto atque odio ipsa quam, ut temporibus totam?
+            </pre>
+        </p>
+        <pre>
+            2² <!-- 2 elevado a 2 com Alt Gr-->
+            2 <sup>2</sup> = 4<!-- texto sobrescrito, dois acima do dois -->
+            log<sub>2</sub>4 = 2 <!-- texto subscrito, dois acima do dois -->
+        </pre>
+        <!-- Ao utilizar códigos dentro do HTML usa-se a tag <code> -->
+        <code>
+            var num = 2;
+            console.log(num);
+        </code>
+    </body>    
+</html> <!--tag de fechamento-->
+
+<!--exclamação + tab é um atalho para criar a estrutura padrão do html-->
