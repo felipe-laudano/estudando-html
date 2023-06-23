@@ -1,167 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Tabelas</title>
-    </head>
 
-    <body>
-        <h1>Tabelas</h1>
-        <!-- Estrutura de uma tabela em HTML -->
-        <!-- Escopo: Bloco de código. Exemplo: Escopo da tabela abaixo é desde a abertura da tag <table> até o fechamento </table> -->
+<head>
+    <meta charset="UTF-8" />
+    <title>Tabelas</title>
+</head>
 
-        <h2>Pessoas</h2>
+<body>
+    <h1>Tabelas</h1>
+    <!-- Estrutura de uma tabela em HTML -->
+    <!-- Escopo: Bloco de código. Exemplo: Escopo da tabela abaixo é desde a abertura da tag <table> até o fechamento </table> -->
 
-        <table border="1" , style="width: 100%">
-            <!--Neste caso a tabela tem como atributos, borda tamanho 1 e possui tamanho de largura 100% utilizável da tela, ou seja, a largura das colunas podem ser até 100% do tela-->
+    <h2>Pessoas</h2>
 
-            <!--Quando tiver sublinhado quer dizer que o atributo não é mais utilizado atualmente, isso será modificado no CSS-->
+    <table border="1" , style="width: 100%">
+        <!--Neste caso a tabela tem como atributos, borda tamanho 1 e possui tamanho de largura 100% utilizável da tela, ou seja, a largura das colunas podem ser até 100% do tela-->
 
-            <!--grupo de colunas. <colgroup> e <col> são tags auxiliares para estilização das colunas na tabela-->
-            <colgroup>
-                <!--CSS para alterar a largura da coluna e cores das células da primeira tabela-->
-                <col style="width: 30%; background-color: lightblue" />
-                <!--1°coluna-->
-                <col style="width: 20%; background-color: lightcoral" />
-                <!--2°coluna-->
-                <col style="width: 50%; background-color: darkseagreen" />
-                <!--3°coluna-->
-            </colgroup>
+        <!--Quando tiver sublinhado quer dizer que o atributo não é mais utilizado atualmente, isso será modificado no CSS-->
 
-            <tr>
-                <!--(table row) Linha de uma tabela-->
-                <th>
-                    <!--(table header) Título das tabelas, deixa negrito-->
-                    Nome
-                </th>
-                <th>Idade</th>
-                <th>E-mail</th>
-            </tr>
-            <tr>
-                <td>
-                    <!-- (table data) Representa a célula da tabela (número de tds representa o número de colunas)-->
-                    Felipe
-                </td>
-                <td>21 anos</td>
-                <td>wfelipelaudano@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Renato</td>
-                <td>14 anos</td>
-                <td>renato@gmail.com</td>
-            </tr>
-            <!-- Se colocar a tag tr>td*3 cria um tr com 3 tds automaticamente-->
-        </table>
+        <!--grupo de colunas. <colgroup> e <col> são tags auxiliares para estilização das colunas na tabela-->
+        <colgroup>
+            <!--CSS para alterar a largura da coluna e cores das células da primeira tabela-->
+            <col style="width: 30%; background-color: lightblue" />
+            <!--1°coluna-->
+            <col style="width: 20%; background-color: lightcoral" />
+            <!--2°coluna-->
+            <col style="width: 50%; background-color: darkseagreen" />
+            <!--3°coluna-->
+        </colgroup>
 
-        <h2>Tabuada multiplicação 2</h2>
-        <table border="one">
+        <tr>
+            <!--(table row) Linha de uma tabela-->
+            <th>
+                <!--(table header) Título das tabelas, deixa negrito-->
+                Nome
+            </th>
+            <th>Idade</th>
+            <th>E-mail</th>
+        </tr>
+        <tr>
+            <td>
+                <!-- (table data) Representa a célula da tabela (número de tds representa o número de colunas)-->
+                Felipe
+            </td>
+            <td>21 anos</td>
+            <td>wfelipelaudano@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Renato</td>
+            <td>14 anos</td>
+            <td>renato@gmail.com</td>
+        </tr>
+        <!-- Se colocar a tag tr>td*3 cria um tr com 3 tds automaticamente-->
+    </table>
+
+    <h2>Tabuada multiplicação 2</h2>
+    <table border="one">
+        <tr>
+            <th>Operação</th>
+            <th>Resultado</th>
+        </tr>
+        <tr>
+            <td>2 * 0 =</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>2 * 1 =</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2 * 2 =</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>2 * 3 =</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>2 * 4 =</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>2 * 5 =</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2 * 6 =</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>2 * 7 =</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>2 * 8 =</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>2 * 9 =</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>2 * 10 =</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <h2>Times de futebol</h2>
+    <table border="1">
+        <thead>
+            <!-- Define o cabeçalho da tabela (títulos)-->
             <tr>
-                <th>Operação</th>
-                <th>Resultado</th>
+                <th colspan="4">Classificação dos times no Brasileirão</th>
+                <!--colspans define a quantidade de colunas que serão ocupadas pelo título-->
             </tr>
             <tr>
-                <td>2 * 0 =</td>
-                <td>0</td>
+                <th>Nome</th>
+                <th>Pontos</th>
+                <th>Saldo de Gols</th>
+                <th>Vitórias</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Define o corpo da tabela (valores)-->
+            <tr>
+                <td>Fluminense</td>
+                <td>20</td>
+                <td>9</td>
+                <td>3</td>
             </tr>
             <tr>
-                <td>2 * 1 =</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>2 * 2 =</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>2 * 3 =</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>2 * 4 =</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>2 * 5 =</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>2 * 6 =</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>2 * 7 =</td>
-                <td>14</td>
-            </tr>
-            <tr>
-                <td>2 * 8 =</td>
-                <td>16</td>
-            </tr>
-            <tr>
-                <td>2 * 9 =</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td>2 * 10 =</td>
+                <td>Corinthians</td>
+                <td>70</td>
+                <td>25</td>
                 <td>20</td>
             </tr>
-        </table>
+            <tr>
+                <td>Flamengo</td>
+                <td>25</td>
+                <td>10</td>
+                <td rowspan="2">10</td>
+                <!--rowspan mescla o conteúdo entre linhas (células)-->
+            </tr>
+            <tr>
+                <td>Palmeiras</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+        </tbody>
 
-        <h2>Times de futebol</h2>
-        <table border="1">
-            <thead>
-                <!-- Define o cabeçalho da tabela (títulos)-->
-                <tr>
-                    <th colspan="4">Classificação dos times no Brasileirão</th>
-                    <!--colspans define a quantidade de colunas que serão ocupadas pelo título-->
-                </tr>
-                <tr>
-                    <th>Nome</th>
-                    <th>Pontos</th>
-                    <th>Saldo de Gols</th>
-                    <th>Vitórias</th>
-                </tr>
-            </thead>
+        <tfoot>
+            <!-- Define o rodapé da tabela-->
+            <tr>
+                <td colspan="4">
+                    <a href="https://brasileirao.cbf.com.br/" , target="_blank">Acesse nosso site.
+                    </a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
 
-            <tbody>
-                <!-- Define o corpo da tabela (valores)-->
-                <tr>
-                    <td>Fluminense</td>
-                    <td>20</td>
-                    <td>9</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>Corinthians</td>
-                    <td>70</td>
-                    <td>25</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Flamengo</td>
-                    <td>25</td>
-                    <td>10</td>
-                    <td rowspan="2">10</td>
-                    <!--rowspan mescla o conteúdo entre linhas (células)-->
-                </tr>
-                <tr>
-                    <td>Palmeiras</td>
-                    <td>10</td>
-                    <td>5</td>
-                </tr>
-            </tbody>
-
-            <tfoot>
-                <!-- Define o rodapé da tabela-->
-                <tr>
-                    <td colspan="4">
-                        <a
-                            href="https://brasileirao.cbf.com.br/"
-                            ,
-                            target="_blank"
-                            >Acesse nosso site.
-                        </a>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </body>
 </html>
