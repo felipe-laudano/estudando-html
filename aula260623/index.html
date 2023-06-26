@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Formulários</title>
 </head>
+
 <body>
     <h1>Formulários</h1>
     <!--<form>, estrutura base de um formulário HTML-->
     <form>
         Nome:
-        <input type="text" placeholder="Digite aqui seu nome completo" name="nome"> <br> <!--input define um campo no formulário. <type> define o tipo do campo, password, numbers e text são exemplos. placeholder é pra inserir texto de fundo, como se fosse um texto explicativo pro campo. name identifica o campo (isso é utilizado pelas ferramentas de armazenamento. A nível de API)-->
+        <input type="text" placeholder="Digite aqui seu nome completo" name="nome" maxlength="10"> <br>
+        <!--input define um campo no formulário. <type> define o tipo do campo, password, numbers e text são exemplos. placeholder é pra inserir texto de fundo, como se fosse um texto explicativo pro campo. name identifica o campo ****PRECISA ESTAR EM TODAS AS TAGS DE FORMULARIOS**** (isso é utilizado pelas ferramentas de armazenamento. A nível de API). maxLength determina que o nome vai ter 10 caracteres no máximo-->
         E-mail:
         <input type="email" name="email"> <br> <!--tipo e-mail-->
         Senha:
         <input type="password" name="password"> <br> <!--tipo senha, oculta a frase-->
         Idade:
-        <input type="number" name="numero"> <br> <!--tipo números-->
+        <input type="number" name="numero" min="0" max="150"> <br> <!--tipo números-->
         Data de nascimento:
-        <input type="date" name="data"> <br> <!--tipo data-->
+        <input type="date" name="data" min="2023-05-26" max="2023-06-26">
+        <!--Necessario usar padrao americano para min e max de datas (2023-06-26) ano mes e dia--> <br> <!--tipo data-->
         Telefone:
-        <input type="tel" name="telefone"> <br> <!--tipo número de telefone-->
+        <input type="tel" name="telefone" , pattern="[0-9]{4,8}"> <br>
+        <!--tipo número de telefone. pattern define que o campo telefone aceita apenas digitos entre 0-9 e min de 4 e max de 8-->
         URL:
         <input type="url" name="url"> <br> <!--tipo url-->
         Frente do RG:
-        <input type="file" name="file" accept=".png, .jpg" multiple> <br> <!--tipo arquivo, accept pode especificar os arquivos suportados, multiple permite selecionar varios arquivos-->
+        <input type="file" name="file" accept=".png, .jpg" multiple> <br>
+        <!--tipo arquivo, accept pode especificar os arquivos suportados, multiple permite selecionar varios arquivos-->
         Escolha sua cor favorita:
         <input type="color" name="color"> <br>
         Horário de registro:
-        <input type="time" name="time" value="15:00" disabled> <br> <small>horário atual</small> <!-- texto pequeno--> <br> <!--tipo tempo, value ja insere um valor no campo automaticamente, disabled deixa o campo travado com o valor especificado em value, deixando indisponível para o usuário alterar o campo-->
+        <input type="time" name="time" value="15:00" disabled> <br> <small>horário atual</small> <!-- texto pequeno-->
+        <br>
+        <!--tipo tempo, value ja insere um valor no campo automaticamente, disabled deixa o campo travado com o valor especificado em value, deixando indisponível para o usuário alterar o campo-->
         Estado cível: <br>
-        Solteiro <input type="radio" name="estado-cível"> <br> <!--tipo múltipla escolha, name adequa para o usuário habilitar apenas uma opção-->
-        Casado <input type="radio" name="estado-cível"> <br>
-        Aceito os termos de uso 
+        Solteiro <input type="radio" name="estado-cível" value="Solteiro"> <br>
+        <!--tipo múltipla escolha, name adequa para o usuário habilitar apenas uma opção. o value é sempre necessário no radio-->
+        Casado <input type="radio" name="estado-cível" value="Casado"> <br>
+        Aceito os termos de uso
         <input type="checkbox" name="checkbox"> <br> <!--tipo caixa de seleção-->
         Nível de inglês:
-        1 <input type="range" name="range" min="1" max="5" step="0.5"> 5 <!--range mostra uma espécie de barra de nível, o min fixa o mínimo do controle e o máximo e o step altera a fluidez que o usuário pode alterar a barra--> <br>
+        1 <input type="range" name="range" min="1" max="5" step="0.5"> 5
+        <!--range mostra uma espécie de barra de nível, o min fixa o mínimo do controle e o máximo e o step altera a fluidez que o usuário pode alterar a barra-->
+        <br>
         Estado:
         <select name="estados"> <!--Cria uma lista de opções que são determinadas nas tags options-->
-            <option disabled selected>Selecione um estado</option> <!--disabled deixa essa opção desabilitada e o selected deixa essa opção selecionada inicialmente-->
+            <option disabled selected>Selecione um estado</option>
+            <!--disabled deixa essa opção desabilitada e o selected deixa essa opção selecionada inicialmente-->
             <option>Ceará</option>
             <option>São Paulo</option>
             <option>Rio de Janeiro</option>
             <option>Bahia</option>
         </select> <br>
-        Fale um pouco sobre você: <br> 
-        <textarea name="textarea" cols="5" rows="1"> Texto padrão.</textarea> <!--área para digitar textos, cols e rows definem o tamanho da área que aparecerá na tela--> <br>
-        <button>Enviar</button>
+        Fale um pouco sobre você: <br>
+        <textarea name="textarea" cols="5" rows="1"> Texto padrão.</textarea>
+        <!--área para digitar textos, cols e rows definem o tamanho da área que aparecerá na tela--> <br>
+
+        <button type="button">Não faz nada</button> <br>
+        <button type="submit">Submit (enviar)</button> <br>
+        <button type="reset">Reset (limpar)</button> <br>
+        <!--Mesma funcionalidade que os botões de cima-->
+        <input type="button" , value="Não faz nada"> <br>
+        <input type="submit" , value="Submit (enviar)"> <br>
+        <input type="reset" , value="Reset(limpar)"> <br>
+
     </form>
 </body>
+
 </html>
+
+<!-- 
+Resumo do que foi utilizado:
+placeholder: Define um texto explicativo para o campo
+name: Indica uma identificação para a informação
+value: Indica o valor do campo
+disabled: habilita/desabilita um campo
+min: Define um numero minimo para campos numericos
+max: Define um numero maximo para campos numericos 
+minLength: minimo de caracteres
+maxLength: máximo de caracteres
+
+pattern: Define um padrão/modelo da informação. Uma expressão regular usada para validar o valor do controle. O padrão deve casar com o valor completo da entrada, não apenas uma parte. Use o atributo title para descrever o padrão para ajudar o usuário. Este atributo é aplicado quando o valor do atributo type é text, search, tel, url ou email; caso contrário ele é ignorado. A linguagem da expressão regular é a mesma do JavaScript. O padrão não deve estar entre barras.
+-->
+
+<!-- 
+    Botoes
+    button: botão comum
+    submit: Submete as informações do formulário
+    reset: Limpar os campos de um formulários
+-->
