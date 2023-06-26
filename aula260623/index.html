@@ -9,11 +9,42 @@
     <!--<form>, estrutura base de um formulário HTML-->
     <form>
         Nome:
-        <input type="password"> <br> <!--input define um campo no formulário. <type> define o tipo do campo, password, numbers e text são exemplos-->
+        <input type="text" placeholder="Digite aqui seu nome completo" name="nome"> <br> <!--input define um campo no formulário. <type> define o tipo do campo, password, numbers e text são exemplos. placeholder é pra inserir texto de fundo, como se fosse um texto explicativo pro campo. name identifica o campo (isso é utilizado pelas ferramentas de armazenamento. A nível de API)-->
         E-mail:
-        <input type="email"> <br>
+        <input type="email" name="email"> <br> <!--tipo e-mail-->
         Senha:
-        <input type="password"> <br>
+        <input type="password" name="password"> <br> <!--tipo senha, oculta a frase-->
+        Idade:
+        <input type="number" name="numero"> <br> <!--tipo números-->
+        Data de nascimento:
+        <input type="date" name="data"> <br> <!--tipo data-->
+        Telefone:
+        <input type="tel" name="telefone"> <br> <!--tipo número de telefone-->
+        URL:
+        <input type="url" name="url"> <br> <!--tipo url-->
+        Frente do RG:
+        <input type="file" name="file" accept=".png, .jpg" multiple> <br> <!--tipo arquivo, accept pode especificar os arquivos suportados, multiple permite selecionar varios arquivos-->
+        Escolha sua cor favorita:
+        <input type="color" name="color"> <br>
+        Horário de registro:
+        <input type="time" name="time" value="15:00" disabled> <br> <small>horário atual</small> <!-- texto pequeno--> <br> <!--tipo tempo, value ja insere um valor no campo automaticamente, disabled deixa o campo travado com o valor especificado em value, deixando indisponível para o usuário alterar o campo-->
+        Estado cível: <br>
+        Solteiro <input type="radio" name="estado-cível"> <br> <!--tipo múltipla escolha, name adequa para o usuário habilitar apenas uma opção-->
+        Casado <input type="radio" name="estado-cível"> <br>
+        Aceito os termos de uso 
+        <input type="checkbox" name="checkbox"> <br> <!--tipo caixa de seleção-->
+        Nível de inglês:
+        1 <input type="range" name="range" min="1" max="5" step="0.5"> 5 <!--range mostra uma espécie de barra de nível, o min fixa o mínimo do controle e o máximo e o step altera a fluidez que o usuário pode alterar a barra--> <br>
+        Estado:
+        <select name="estados"> <!--Cria uma lista de opções que são determinadas nas tags options-->
+            <option disabled selected>Selecione um estado</option> <!--disabled deixa essa opção desabilitada e o selected deixa essa opção selecionada inicialmente-->
+            <option>Ceará</option>
+            <option>São Paulo</option>
+            <option>Rio de Janeiro</option>
+            <option>Bahia</option>
+        </select> <br>
+        Fale um pouco sobre você: <br> 
+        <textarea name="textarea" cols="5" rows="1"> Texto padrão.</textarea> <!--área para digitar textos, cols e rows definem o tamanho da área que aparecerá na tela--> <br>
         <button>Enviar</button>
     </form>
 </body>
